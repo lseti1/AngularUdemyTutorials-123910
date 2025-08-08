@@ -1,5 +1,16 @@
 import { Component, EventEmitter, Input, Output} from '@angular/core';
 
+// type UserObject = {
+//   id: string;
+//   avatar: string;
+//   name: string;
+// };
+
+interface UserInterface {
+  id: string;
+  avatar: string;
+  name: string;
+}
 
 @Component({
   selector: 'app-user',
@@ -8,15 +19,7 @@ import { Component, EventEmitter, Input, Output} from '@angular/core';
   styleUrl: './user.css'
 })
 export class User {
-  // @Input({required: true}) id!: string;
-  // @Input({required: true}) avatar!: string;
-  // @Input({required: true}) name!: string;
-  
-  @Input({required: true}) user!: {
-    id: string;
-    avatar: string;
-    name: string; 
-  };
+  @Input({required: true}) user!: UserInterface;
   
   @Output() select = new EventEmitter<string>();
 
