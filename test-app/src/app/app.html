@@ -3,18 +3,11 @@
   <div class="flex flex-row justify-center items-start h-[70%] py-10">
     <div class="h-[70%] w-[60%] flex justify-start items-start gap-10">
       <ul class="flex flex-col gap-4">
-        <li>
-          <app-user [user]="users[0]" (select)="onSelectUser($event)" />
-        </li>
-        <li>
-          <app-user [user]="users[1]" (select)="onSelectUser($event)" />
-        </li>
-        <li>
-          <app-user [user]="users[2]" (select)="onSelectUser($event)" />
-        </li>
-        <li>
-          <app-user [user]="users[3]" (select)="onSelectUser($event)" />
-        </li>
+        @for (user of users; track user.id) {
+          <li>
+            <app-user [user]="user" (select)="onSelectUser($event)" />
+          </li>
+        }
       </ul>
       <app-tasks class="w-[40%] flex flex-col justify-start bg-gray-800" [name]="selectedUser ? selectedUser.name : 'No Name Available'"></app-tasks>
     </div>
