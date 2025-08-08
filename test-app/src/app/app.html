@@ -1,9 +1,18 @@
 <div class="bg-black h-screen w-full text-white tracking-tighter">
   <app-header class="h-[30%] flex justify-center"></app-header>
   <div class="h-[70%] flex justify-center items-start py-10">
-    <ul class="w-[60%]">
+    <ul class="w-[60%] flex flex-col gap-4">
       <li>
-        <app-user ></app-user>
+        <app-user [avatar]="users[0].avatar" [name]="users[0].name"/>
+      </li>
+      <li>
+        <app-user [avatar]="users[1].avatar" [name]="users[1].name"/>
+      </li>
+      <li>
+        <app-user [avatar]="users[2].avatar" [name]="users[2].name"/>
+      </li>
+      <li>
+        <app-user [avatar]="users[3].avatar" [name]="users[3].name"/>
       </li>
     </ul>
     
