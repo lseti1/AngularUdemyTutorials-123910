@@ -14,4 +14,8 @@ export class App {
   protected readonly title = signal('test-app');
 
   users = DUMMY_USERS
+
+  onSelectUser(id: string) {
+    console.log('Selected user ID:', id);
+  }
 }
