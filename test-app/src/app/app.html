@@ -16,7 +16,7 @@
           <app-user [id]="users[3].id" [avatar]="users[3].avatar" [name]="users[3].name" (select)="onSelectUser($event)" />
         </li>
       </ul>
-      <app-tasks class="w-[40%] flex flex-col justify-start bg-gray-800" [name]="selectedUser.name"></app-tasks>
+      <app-tasks class="w-[40%] flex flex-col justify-start bg-gray-800" [name]="selectedUser ? selectedUser.name : 'No Name Available'"></app-tasks>
     </div>
   </div>
 </div>
