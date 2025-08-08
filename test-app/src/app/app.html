@@ -1,21 +1,22 @@
-<div class="bg-black h-screen w-full text-white tracking-tighter">
+<div class="bg-black h-screen w-full text-white tracking-tighter flex flex-col">
   <app-header class="h-[30%] flex justify-center"></app-header>
-  <div class="h-[70%] flex justify-center items-start py-10">
-    <ul class="w-[60%] flex flex-col gap-4">
-      <li>
-        <app-user [id]="users[0].id" [avatar]="users[0].avatar" [name]="users[0].name" (select)="onSelectUser($event)"/>
-      </li>
-      <li>
-        <app-user [id]="users[1].id" [avatar]="users[1].avatar" [name]="users[1].name" (select)="onSelectUser($event)"/>
-      </li>
-      <li>
-        <app-user [id]="users[2].id" [avatar]="users[2].avatar" [name]="users[2].name" (select)="onSelectUser($event)"/>
-      </li>
-      <li>
-        <app-user [id]="users[3].id" [avatar]="users[3].avatar" [name]="users[3].name" (select)="onSelectUser($event)"/>
-      </li>
-    </ul>
-    
+  <div class="flex flex-row justify-center items-start h-[70%] py-10">
+    <div class="h-[70%] w-[60%] flex justify-start items-start gap-10">
+      <ul class="flex flex-col gap-4">
+        <li>
+          <app-user [id]="users[0].id" [avatar]="users[0].avatar" [name]="users[0].name" (select)="onSelectUser($event)" />
+        </li>
+        <li>
+          <app-user [id]="users[1].id" [avatar]="users[1].avatar" [name]="users[1].name" (select)="onSelectUser($event)" />
+        </li>
+        <li>
+          <app-user [id]="users[2].id" [avatar]="users[2].avatar" [name]="users[2].name" (select)="onSelectUser($event)" />
+        </li>
+        <li>
+          <app-user [id]="users[3].id" [avatar]="users[3].avatar" [name]="users[3].name" (select)="onSelectUser($event)" />
+        </li>
+      </ul>
+      <app-tasks class="w-[40%] flex flex-col justify-start bg-gray-800" [name]="selectedUser.name"></app-tasks>
+    </div>
   </div>
-  
 </div>
