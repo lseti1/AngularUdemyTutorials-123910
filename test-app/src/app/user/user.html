@@ -1,6 +1,8 @@
 <div class="flex justify-start items-start overflow-hidden rounded shadow">
-    <button (click)="onSelectUser()" class="flex flex-row items-center justify-start w-full gap-2 bg-gray-800 cursor-pointer px-4 py-2 text-left hover:bg-blue-700 min-w-[25%]">
+    <button (click)="onSelectUser()" class="flex flex-row items-center justify-start w-full gap-2 bg-gray-800 cursor-pointer px-4 py-2 text-left hover:bg-blue-700 min-w-[25%]" [class.bg-blue-600]="selected">
         <img class="w-10 rounded-full shadow" [src]="imagePath" [alt]="user.name"/>
         <span class="m-0 p-0 text-lg font-semibold ">{{ user.name }}</span>
     </button>
 </div>
+
+
