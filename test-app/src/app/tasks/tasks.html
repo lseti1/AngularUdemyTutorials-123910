@@ -1,8 +1,12 @@
+@if (isAddingTask) {
+    <app-new-task />
+}
+
 <div class="flex flex-col p-4 gap-2 h-full w-full">
     <header class="flex flex-row justify-between w-full">
         <h1 class="text-3xl text-gray-400 font-bold">{{name}}</h1>
         <menu>
-            <button class="bg-blue-900 rounded py-2 px-4">Add Task</button>
+            <button (click)="onStartAddTask()" class="bg-blue-900 rounded py-2 px-4">Add Task</button>
         </menu>
     </header>
     <ul class="w-full h-full flex flex-col gap-4 overflow-hidden">
