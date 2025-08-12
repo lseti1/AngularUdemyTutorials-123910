@@ -40,4 +40,8 @@ export class Tasks {
   get selectedUserTracks() {
     return this.Tasks.filter((task) => task.userId === this.userId);
   }
+
+  onCompleteTask(id: string) {
+    this.Tasks = this.Tasks.filter((task) => task.id !== id);
+  }
 }
