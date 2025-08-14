@@ -1,7 +1,6 @@
 @if (isAddingTask) {
-    <app-new-task (cancel)="onCancelAddTask()" (add)="onAddTask($event)"/>
+    <app-new-task [userId]="userId" (close)="onCloseAddTask()"/>
 }
-
 
 <div class="flex flex-col p-4 gap-2 h-full w-full">
     <header class="flex flex-row justify-between w-full">
@@ -13,7 +12,7 @@
     <ul class="w-full h-full flex flex-col gap-4 overflow-hidden">
         @for (task of selectedUserTracks; track task.id) {
             <li class="h-[30%] ">
-                <app-task class="" [task]="task" (complete)="onCompleteTask($event)"/>
+                <app-task class="" [task]="task"/>
             </li>
         }
     </ul>
