@@ -1,6 +1,7 @@
 @if (isAddingTask) {
-    <app-new-task />
+    <app-new-task (cancel)="onCancelAddTask()"/>
 }
+
 
 <div class="flex flex-col p-4 gap-2 h-full w-full">
     <header class="flex flex-row justify-between w-full">
